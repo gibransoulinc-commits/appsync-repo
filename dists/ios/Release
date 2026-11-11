@@ -3,6 +3,13 @@ Label: M4APlayer Mirror
 Suite: stable
 Version: 1.0
 Codename: ios
+Date: Wed, 11 Nov 2026 19:10:30 GMT
 Architectures: iphoneos-arm64
 Components: main
 Description: Mirror of AppSync Unified 116.0 (rootless) for jailbroken iOS.
+MD5Sum:
+ 18032fc505b3a591ec49adf0d572a378 1243 Packages
+ 9801f6894bf1425821ad597e9cd89225 627 Packages.gz
+SHA256:
+ cb59d973475fd3e12ac38a931b157397a3feb3f66d0f9137f53c01db533fda6c 1243 Packages
+ 7ec757f36bdba7556cc2699f21cf562690ae37dc9f6f9f9fcbaf399c531d0a1c 627 Packages.gz
