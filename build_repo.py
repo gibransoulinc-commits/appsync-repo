@@ -78,7 +78,9 @@ def release(components):
     )
     return text.encode("utf-8")
 
-write("Release", release(""))
+# Sileo requires a "Components" key even for flat repos (RepoManager.swift:651),
+# so the root Release must declare it; the source itself stays flat (suite "").
+write("Release", release("main"))
 
 for codename in ("ios", "stable"):
     base = f"dists/{codename}"
