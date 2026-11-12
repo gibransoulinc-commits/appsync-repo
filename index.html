@@ -5,30 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AppSync Unified 116.0 (rootless) mirror</title>
 <style>
-  body { font: 16px/1.5 -apple-system, system-ui, sans-serif; margin: 0 auto; max-width: 44rem; padding: 2rem 1.25rem; color: #111; }
-  code { background: #f2f2f2; padding: .1rem .3rem; border-radius: .25rem; }
-  .btn { display: inline-block; margin: 1rem 0; padding: .75rem 1.25rem; background: #0a84ff; color: #fff; text-decoration: none; border-radius: .6rem; font-weight: 600; }
-  h1 { font-size: 1.5rem; }
-  .muted { color: #666; font-size: .9rem; }
-  @media (prefers-color-scheme: dark) { body { background:#111; color:#eee } code { background:#222 } .muted { color:#999 } }
+  body { font: 17px/1.55 -apple-system, system-ui, sans-serif; margin: 0 auto; max-width: 44rem; padding: 2rem 1.25rem; color: #111; }
+  code { background: #f2f2f2; padding: .15rem .35rem; border-radius: .3rem; word-break: break-all; }
+  .btn { display: block; text-align: center; margin: 1rem 0; padding: .9rem 1.25rem; background: #0a84ff; color: #fff; text-decoration: none; border-radius: .7rem; font-weight: 700; font-size: 1.05rem; }
+  .btn.alt { background: #2c2c2e; }
+  h1 { font-size: 1.4rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.05rem; margin-top: 2rem; }
+  .muted { color: #666; font-size: .85rem; }
+  ol { padding-left: 1.2rem; }
+  @media (prefers-color-scheme: dark) { body { background:#111; color:#eee } code { background:#222 } .muted { color:#999 } .btn.alt { background:#3a3a3c } }
 </style>
 </head>
 <body>
 <h1>AppSync Unified 116.0 (rootless)</h1>
-<p>Mirror of the official package, because <code>cydia.akemi.ai</code> is currently
-returning HTTP 522. Built for rootless jailbreaks (<code>/var/jb</code>),
-architecture <code>iphoneos-arm64</code>.</p>
+<p class="muted">Mirror of the official package. <code>cydia.akemi.ai</code> is returning
+HTTP 522, so this source serves the identical build: <code>iphoneos-arm64</code>,
+files under <code>/var/jb</code>.</p>
 
-<a class="btn" href="debs/AppSyncUnified-rootless.deb">Download the .deb</a>
+<a class="btn" href="sileo://source/https://gibransoulinc-commits.github.io/appsync-repo/">Open in Sileo and add this source</a>
+<a class="btn alt" href="zbra://sources/add/https://gibransoulinc-commits.github.io/appsync-repo/">Open in Zebra and add this source</a>
 
-<h2>Install through Sileo or Zebra</h2>
-<p>Add this URL as a source, then install <strong>AppSync Unified</strong>:</p>
-<p><code>https://gibransoulinc-commits.github.io/appsync-repo/</code></p>
+<h2>Or add it by hand</h2>
+<p>Source URL:</p>
+<p><code id="src">https://gibransoulinc-commits.github.io/appsync-repo/</code></p>
+<p><button class="btn alt" onclick="navigator.clipboard.writeText(document.getElementById('src').textContent).then(()=>this.textContent='Copied')">Copy source URL</button></p>
+<ol>
+  <li>Sileo → Sources → <strong>+</strong> → paste → Add</li>
+  <li>Install <strong>AppSync Unified</strong>, then respring</li>
+  <li>Install the IPA with 3uTools / Filza</li>
+</ol>
 
-<h2>Install with Filza</h2>
-<p>Download the .deb above, open it in Filza, tap <strong>Install</strong>, then respring.</p>
+<h2>Direct download</h2>
+<p><a class="btn alt" href="debs/AppSyncUnified-rootless.deb">Download the .deb (49 KB)</a></p>
 
-<p class="muted">Unofficial mirror. Original package by Karen (akemi.ai),
-source at github.com/akemin-dayo/AppSync.</p>
+<p class="muted">Unofficial mirror of the package by Karen (akemi.ai),
+source at github.com/akemin-dayo/AppSync. SHA256
+<code>2bdaac72a6d1b006309b7dd28f51b1e3d351d3d8758fc9f08ca670f1d71eb382</code></p>
 </body>
 </html>
